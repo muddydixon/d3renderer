@@ -34,7 +34,7 @@ describe('d3rendere', function(){
   describe('create image', function(){
     var svg = null;
     before(function(){
-      var svg = d3.select('svg');
+      var svg = d3.select('svg').attr('width', width).attr('height', 400).style('background', '#FFF');
       svg.selectAll('circle').data(rings).enter()
         .append('circle')
         .attr('cx', function(d){ return d.x; })
